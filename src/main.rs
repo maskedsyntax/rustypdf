@@ -483,7 +483,23 @@ fn split_pdf(input: &PathBuf, output_dir: &PathBuf) -> Result<usize, Box<dyn std
 
 fn compress_pdf(input: &PathBuf, output: PathBuf) -> Result<(), Box<dyn std::error::Error>> {
     let mut doc = Document::load(input)?;
+    
+    // Remove metadata, producer info, etc.
+    doc.trailer.remove(b"Info");
+    doc.trailer.remove(b"Metadata");
+    doc.trailer.remove(b"PieceInfo");
+    doc.trailer.remove(b"XMP");
+
+    // Force re-compression of all streams
+    doc.decompress();
     doc.compress();
+    
+    // Prune unused objects (orphans)
+    doc.prune_objects();
+    
+    // Attempt to delete version history if it exists
+    doc.trailer.remove(b"Prev");
+
     doc.save(output)?;
     Ok(())
 }
