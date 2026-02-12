@@ -10,17 +10,17 @@ A planned feature-rich, cross-platform PDF management tool built using **Rust** 
 ---
 
 ## **Project Status**
-This project is currently in the planning phase. Contributions and suggestions are welcome as we finalize the architecture and feature set.
+This project is currently in the early development phase. We have implemented a basic GTK 3 GUI with core PDF management features.
 
 ---
 
-## **Planned Features**
+## **Implemented Features**
 
 ### **PDF Management**
-- Merge multiple PDF files into one.
-- Split PDF files into smaller sections.
-- Compress PDFs for reduced file size.
-- Rotate pages within PDFs.
+- **Merge**: Combine multiple PDF files into one.
+- **Split**: Extract individual pages from a PDF.
+- **Compress**: Reduce PDF file size by compressing streams.
+- **Rotate**: Rotate all pages in a PDF by 90 degrees.
 
 ### **Conversion Tools**
 - Word to PDF.
