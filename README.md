@@ -21,16 +21,18 @@ This project is currently in the early development phase. We have implemented a 
 - **Split**: Extract individual pages from a PDF.
 - **Compress**: Reduce PDF file size by compressing streams.
 - **Rotate**: Rotate all pages in a PDF by 90 degrees.
+- **Images to PDF**: Convert JPG and PNG images to PDF.
+- **Delete Pages**: Remove specific pages from a PDF document.
 
 ### **Conversion Tools**
-- Word to PDF.
-- PPT to PDF.
-- JPG to PDF.
+- JPG to PDF (Implemented).
+- Word to PDF (Planned).
+- PPT to PDF (Planned).
 
 ### **PDF Organization**
-- Sort pages within PDFs.
-- Add new pages to PDFs.
-- Delete unwanted pages from PDFs.
+- Delete unwanted pages from PDFs (Implemented).
+- Sort pages within PDFs (Planned).
+- Add new pages to PDFs (Planned).
 
 ### **Security Features**
 - Add password protection to secure your PDFs.
