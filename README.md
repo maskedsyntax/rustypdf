@@ -31,11 +31,15 @@ RustyPDF is a high-performance, open-source PDF management tool built with Rust 
 ## How to Use
 
 1. Install Dependencies: Ensure you have GTK 3 installed on your system.
-2. Run the App: 
+2. macOS Setup: If you see a "GSettings schemas" error on macOS, run this in your terminal:
+   ```bash
+   export XDG_DATA_DIRS=$XDG_DATA_DIRS:/opt/homebrew/share
+   ```
+3. Run the App: 
    ```bash
    cargo run --release
    ```
-3. Select your tool: Use the tabs at the top to navigate between Merge, Split, Compress, and more.
+4. Select your tool: Use the tabs at the top to navigate between Merge, Split, Compress, and more.
 
 ---
 
